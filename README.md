@@ -18,8 +18,6 @@ Provide following parameters:
 
 ### Examples
 
-You can alternatively mount `/output` path to retrieve the output file. 
-
 Sample `docker-compoe.yml` file
 ```
 version: "3.7"
@@ -33,7 +31,7 @@ services:
       - Z_NODE_SIZE=10
 ```
 
-With output volume attached
+You can alternatively mount `/output` path to save the output file to a directory.
 ```
 version: "3.7"
 
@@ -48,7 +46,7 @@ services:
       - /local/path/to/output:/output
 ```
 
-Serve output on a different port: 
+Output file can also be accessed by the static web server that starts once the smoketest is over. 
 
 ```
 version: "3.7"
