@@ -17,8 +17,7 @@ To start this container from command line with minimal arguments, type:
 $ docker run -d -e CONNECT_STRING=zknode.example.com:2181 atopcu/zk-smoketest
 ```
 
-### Running this image with docker-compose
-`CONNECT_STRING` is the only required environment variable. 
+### Running with docker-compose
 ```
 version: "3.7"
 
@@ -31,7 +30,8 @@ services:
       - Z_NODE_SIZE=10
 ```
 
-You can alternatively mount `/output` path to save the output file to a directory.
+### Mounting output directory
+You can alternatively mount `/output` path to save the output file to a local directory.
 ```
 version: "3.7"
 
@@ -46,6 +46,7 @@ services:
       - /local/path/to/output:/output
 ```
 
+### Output server
 Output file can also be accessed by the static web server that starts once the smoketest is over. 
 
 ```
