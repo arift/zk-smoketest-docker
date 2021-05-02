@@ -2,8 +2,6 @@
 
 More info on Smoketest: [https://github.com/phunt/zk-smoketest](https://github.com/phunt/zk-smoketest).
 
-Source for this container: [https://github.com/arift/zk-smoketest-docker](https://github.com/arift/zk-smoketest-docker).
-
 This container will allow you to run ZooKeeper Smoketest against any ZooKeeper cluster. 
 Once test is completed, results will be available at localhost:80 by default. 
 
@@ -20,6 +18,7 @@ $ docker run -d -e CONNECT_STRING=zknode.example.com:2181 atopcu/zk-smoketest
 ```
 
 ### Running this image with docker-compose
+`CONNECT_STRING` is the only required environment variable. 
 ```
 version: "3.7"
 
